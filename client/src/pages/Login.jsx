@@ -18,7 +18,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post('/api/auth/login', { email, password });
+      const res = await axios.post('https://p-o-s-system.onrender.com/api/auth/login', { email, password });
       login(res.data.user, res.data.token);
       navigate('/dashboard');
     } catch (err) {
