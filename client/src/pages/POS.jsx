@@ -89,7 +89,7 @@ export default function POS() {
 
   if (completedSale) {
     return (
-      <div style={{ padding: 30, background: '#f5f6fa', minHeight: '100vh' }}>
+      <div className="page" style={{ padding: 30, background: '#f5f6fa', minHeight: '100vh' }}>
         <Receipt sale={completedSale} />
         <div style={{ textAlign: 'center', marginTop: 20 }} className="no-print">
           <button onClick={handlePrint} style={{ padding: '10px 24px', marginRight: 10 }}>
@@ -107,7 +107,7 @@ export default function POS() {
   }
 
   return (
-    <div style={{ padding: 24, display: 'flex', gap: 24, background: '#f5f6fa', minHeight: '100vh' }}>
+    <div className="page pos-layout" style={{ padding: 24, display: 'flex', gap: 24, background: '#f5f6fa', minHeight: '100vh' }}>
       <div style={{ flex: 2 }}>
         <h2>Point of Sale</h2>
         <input
@@ -116,7 +116,7 @@ export default function POS() {
           onChange={(e) => setSearch(e.target.value)}
           style={{ width: '100%', padding: 10, marginBottom: 16 }}
         />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
+        <div className="product-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
           {filteredProducts.map((p) => (
             <div
               key={p._id}

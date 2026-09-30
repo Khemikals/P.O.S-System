@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav style={{
+    <nav className="navbar" style={{
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -30,7 +30,7 @@ export default function Navbar() {
       color: 'white',
       boxShadow: '0 1px 4px rgba(0,0,0,0.15)'
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <div className="navbar-links" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <span style={{ fontSize: 18, fontWeight: 700, marginRight: 16 }}>🛒 Mommy's Shop</span>
         <Link to="/dashboard" style={linkStyle}>Dashboard</Link>
         <Link to="/pos" style={linkStyle}>POS</Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
           <Link to="/reports" style={linkStyle}>Reports</Link>
         )}
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+      <div className="navbar-right" style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
         <span style={{ fontSize: 14, color: '#d1d5db' }}>{user.name} · {user.role}</span>
         <button
           onClick={handleLogout}
