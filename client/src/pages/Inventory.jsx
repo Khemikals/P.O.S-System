@@ -79,7 +79,7 @@ export default function Inventory() {
   if (loading) return <p style={{ padding: 24 }}>Loading...</p>;
 
   return (
-    <div style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
+    <div className="page" style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
       <h2>Inventory</h2>
       {error && <p style={{ color: '#dc2626' }}>{error}</p>}
 
@@ -102,15 +102,15 @@ export default function Inventory() {
             <option value="kg">Kg</option>
             <option value="bag">Bag</option>
           </select>
-          <div style={{ display: 'flex', gap: 10 }}>
+          <div className="form-row" style={{ display: 'flex', gap: 10 }}>
             <input name="costPrice" type="number" placeholder="Cost price" value={form.costPrice} onChange={handleChange} required style={{ flex: 1 }} />
             <input name="sellingPrice" type="number" placeholder="Selling price" value={form.sellingPrice} onChange={handleChange} required style={{ flex: 1 }} />
           </div>
-          <div style={{ display: 'flex', gap: 10 }}>
+          <div className="form-row" style={{ display: 'flex', gap: 10 }}>
             <input name="stockQty" type="number" placeholder="Stock quantity" value={form.stockQty} onChange={handleChange} required style={{ flex: 1 }} />
             <input name="reorderLevel" type="number" placeholder="Reorder level" value={form.reorderLevel} onChange={handleChange} style={{ flex: 1 }} />
           </div>
-          <div style={{ display: 'flex', gap: 10 }}>
+          <div className="form-row" style={{ display: 'flex', gap: 10 }}>
             <button type="submit" style={{ flex: 1 }}>
               {editingId ? 'Update Product' : 'Add Product'}
             </button>
