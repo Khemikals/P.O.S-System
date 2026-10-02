@@ -59,7 +59,7 @@ export default function Dashboard() {
   );
 
   return (
-    <div style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
+    <div className="page" style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
       <h2 style={{ marginBottom: 2 }}>Welcome, {user.name} 👋</h2>
       <p style={{ color: '#6b7280', marginTop: 0 }}>{user.role === 'owner' ? 'Shop Owner' : 'Cashier'}</p>
 
@@ -94,7 +94,7 @@ export default function Dashboard() {
         </div>
       )}
 
-      <div style={{ marginTop: 30, display: 'flex', gap: 12 }}>
+      <div style={{ marginTop: 30, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
         <Link to="/pos">
           <button style={{ padding: '10px 20px' }}>🛒 Go to POS</button>
         </Link>

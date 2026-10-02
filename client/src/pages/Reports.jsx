@@ -85,7 +85,7 @@ export default function Reports() {
   );
 
   return (
-    <div style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
+    <div className="page" style={{ padding: 24, background: '#f5f6fa', minHeight: '100vh' }}>
       <h2>Reports</h2>
 
       <div style={{ display: 'flex', gap: 16, marginBottom: 30, flexWrap: 'wrap' }}>
